@@ -1,0 +1,66 @@
+@keyframes level-up {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(147, 51, 234, 0.4);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 20px 10px rgba(147, 51, 234, 0.4);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(147, 51, 234, 0.4);
+    }
+}
+
+.level-up {
+    animation: level-up 1s ease-in-out;
+}
+
+/* Add a glow effect for the progress bar */
+.bg-purple-600 {
+    transition: all 0.3s ease;
+}
+
+.bg-purple-600:hover {
+    box-shadow: 0 0 10px rgba(147, 51, 234, 0.6);
+}
+
+/* Add smooth transition for avatar */
+.user-avatar {
+    transition: all 0.5s ease-in-out;
+}
+
+/* Add pulse effect when leveling up */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.level-up .user-avatar {
+    animation: pulse 1s ease-in-out;
+}
+
+/* Add glow effect for level text when leveling up */
+.level-up .text-purple-200 {
+    animation: textGlow 1s ease-in-out;
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 0 rgba(147, 51, 234, 0);
+    }
+    50% {
+        text-shadow: 0 0 10px rgba(147, 51, 234, 0.8);
+    }
+    100% {
+        text-shadow: 0 0 0 rgba(147, 51, 234, 0);
+    }
+} 
